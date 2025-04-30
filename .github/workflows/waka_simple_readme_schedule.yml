@@ -1,0 +1,41 @@
+name: waka_simple_readme_schedule
+
+on:
+  workflow_dispatch: # 수동 실행
+  schedule:
+    - cron: "0 0 * * *" # 매일 자정(UTC 기준) 실행 = 오전 9시 KST
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    name: Update Waka Readme Section
+    runs-on: ubuntu-latest
+    steps:
+      - uses: athul/waka-readme@master
+        with:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }} # 📌 GitHub Personal Access Token (프로필 저장소가 아닌 경우 필요)
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }} # ✅ WakaTime에서 발급받은 API Key (필수)
+        
+          ### 🔽 통계 콘텐츠 관련 설정 (표시 형식 등)
+          SHOW_TITLE: true # ✅ 통계 블록 상단에 제목(예: "📊 WakaTime Stats")을 표시할지 여부
+          SECTION_NAME: waka-simple # ✅ README.md 안 삽입될 섹션 이름. START/END 주석과 반드시 일치해야 함
+          BLOCKS: ░▒▓█ # ✅ 그래프 스타일 (예: █, ░▒▓█, ->, ⣀⣄⣤⣦⣶⣷⣿ 등 다양한 ASCII 형태 가능)
+          CODE_LANG: java # ✅ 코드 블록 언어 지정 (GitHub Markdown 문법 강조용, markdown, java, rust, `txt`, `python`, `json` 등 가능)
+          TIME_RANGE: last_year # ✅ 통계 기간: 최근 1년간 (기타 옵션: `last_7_days`, `last_30_days`, `last_6_months`, `all_time`)
+          LANG_COUNT: 5 # ✅ 표시할 언어의 최대 개수
+          SHOW_TIME: true # ✅ 각 언어별로 소요된 시간 표시 여부
+          SHOW_TOTAL: true # ✅ 총 코딩 시간 표시 여부
+          SHOW_MASKED_TIME: false # ✅ 전체 시간에 '기타(Other)' 언어 포함 여부 (`SHOW_TOTAL`을 덮어씀)
+          STOP_AT_OTHER: true # ✅ '기타(Other)' 언어가 나타나면 그 이후 언어 생략
+          IGNORED_LANGUAGES: YAML JSON TOML # ✅ 표시하지 않을 언어 목록 (쉼표 또는 공백 구분)
+        
+          ### 🔽 자동 커밋 관련 설정
+          COMMIT_MESSAGE: "docs: waka-simple 통계 업데이트" # ✅ 자동 커밋 메시지 지정
+          TARGET_BRANCH: master # ✅ README.md 파일이 존재하는 브랜치명 (기본값은 master/main)
+          TARGET_PATH: README.md # ✅ 수정 대상 파일 경로 (보통은 README.md)
+          COMMITTER_NAME: GitHubActionBot # ✅ 커밋을 남기는 봇의 이름
+          COMMITTER_EMAIL: action-bot@github.com # ✅ 커밋터 이메일
+          AUTHOR_NAME: sihyunjojo # ✅ 커밋 작성자 이름 (보통 자신의 GitHub 이름)
+          AUTHOR_EMAIL: si4018@naver.com # ✅ 커밋 작성자 이메일 (secrets로 분리도 가능)
