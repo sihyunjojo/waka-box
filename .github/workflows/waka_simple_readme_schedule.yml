@@ -20,7 +20,7 @@ jobs:
         
           ### 🔽 통계 콘텐츠 관련 설정 (표시 형식 등)
           SHOW_TITLE: true # ✅ 통계 블록 상단에 제목(예: "📊 WakaTime Stats")을 표시할지 여부
-          SECTION_NAME: waka-simple # ✅ README.md 안 삽입될 섹션 이름. START/END 주석과 반드시 일치해야 함
+          SECTION_NAME: wakasimple # ✅ README.md 안 삽입될 섹션 이름. START/END 주석과 반드시 일치해야 함
           BLOCKS: ░▒▓█ # ✅ 그래프 스타일 (예: █, ░▒▓█, ->, ⣀⣄⣤⣦⣶⣷⣿ 등 다양한 ASCII 형태 가능)
           CODE_LANG: java # ✅ 코드 블록 언어 지정 (GitHub Markdown 문법 강조용, markdown, java, rust, `txt`, `python`, `json` 등 가능)
           TIME_RANGE: last_year # ✅ 통계 기간: 최근 1년간 (기타 옵션: `last_7_days`, `last_30_days`, `last_6_months`, `all_time`)
