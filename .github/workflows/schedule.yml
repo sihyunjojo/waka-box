@@ -1,26 +1,19 @@
-name: Update gist with WakaTime stats
+name: Waka Readme
+
 on:
   schedule:
-    - cron: "0 0 * * *"
-  # Manual triggers with workflow_dispatch
+    - cron: "30 18 * * *"  # 매일 자정(IST 기준) 실행
   workflow_dispatch:
+
+permissions:
+  contents: write  # README 수정 위해 write 권한 부여
+
 jobs:
-  update-gist:
+  update-readme:
+    name: Update Readme with Metrics
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - name: Update gist
-        uses: matchai/waka-box@master
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          GIST_ID: ${{ secrets.GIST_ID }}
+      - uses: anmol098/waka-readme-stats@master
+        with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
-          # 플래그 자리
-          LOCALE: "ko" #한국
-          SHOW_LINES_OF_CODE: "True"
-          SHOW_PROFILE_VIEWS: "True"
-          SHOW_DAYS_OF_WEEK: "False" 
-          SHOW_SHORT_INFO: "False" 
-          SHOW_LOC_CHART: "True" 
-          SHOW_PROJECTS: "False" 
-          SHOW_LANGUAGE_PER_REPO: "True"
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
