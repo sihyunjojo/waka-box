@@ -1,4 +1,4 @@
-name: Readme Updating WakaTime statistics
+name: waka readme schedule
 
 on:
   schedule:
