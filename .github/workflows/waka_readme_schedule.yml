@@ -61,7 +61,7 @@ jobs:
           SHOW_UPDATED_DATE: true
       
           # 업데이트 시간 형식 (예: 30/04/2025 09:42:47)
-          UPDATED_DATE_FORMAT: "%Y년 %m월 %d일 (UTC 기준)"
+          UPDATED_DATE_FORMAT: "%Y년 %m월 %d일"
       
           # README 안 삽입할 위치 설정
           SECTION_NAME: waka
