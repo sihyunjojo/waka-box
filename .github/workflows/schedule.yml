@@ -70,4 +70,4 @@ jobs:
     SYMBOL_VERSION: 1
 
     # 자동 커밋 메시지
-    COMMIT_MESSAGE: docs: waka-readme 그래프 새로운 메트릭으로 업데이트
+    COMMIT_MESSAGE: "docs: waka-readme 그래프 새로운 메트릭으로 업데이트"
