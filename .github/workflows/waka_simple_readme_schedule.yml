@@ -33,8 +33,8 @@ jobs:
         
           ### 🔽 자동 커밋 관련 설정
           COMMIT_MESSAGE: "docs: waka-simple 통계 업데이트" # ✅ 자동 커밋 메시지 지정
-          # TARGET_BRANCH: main # ✅ README.md 파일이 존재하는 브랜치명 (기본값은 master/main)
-          # TARGET_PATH: README.md # ✅ 수정 대상 파일 경로 (보통은 README.md)
+          TARGET_BRANCH: main # ✅ README.md 파일이 존재하는 브랜치명 (기본값은 master/main)
+          TARGET_PATH: README.md # ✅ 수정 대상 파일 경로 (보통은 README.md)
           # COMMITTER_NAME: GitHubActionBot # ✅ 커밋을 남기는 봇의 이름
           # COMMITTER_EMAIL: action-bot@github.com # ✅ 커밋터 이메일
           AUTHOR_NAME: sihyunjojo # ✅ 커밋 작성자 이름 (보통 자신의 GitHub 이름)
