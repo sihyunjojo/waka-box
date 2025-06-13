@@ -41,7 +41,7 @@ jobs:
           SHOW_PROFILE_VIEWS: false
       
           # GitHub 저장소 수, 커밋 수 등 요약 정보 표시
-          SHOW_SHORT_INFO: true
+          SHOW_SHORT_INFO: false
       
           # ❌ 아래 항목들은 전부 숨김 처리
       
