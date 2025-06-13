@@ -36,7 +36,7 @@ jobs:
           REPOSITORY: sihyunjojo/sihyunjojo
           TARGET_BRANCH: main # ✅ README.md 파일이 존재하는 브랜치명 (기본값은 master/main)
           TARGET_PATH: README.md # ✅ 수정 대상 파일 경로 (보통은 README.md)
-          # COMMITTER_NAME: GitHubActionBot # ✅ 커밋을 남기는 봇의 이름
-          # COMMITTER_EMAIL: action-bot@github.com # ✅ 커밋터 이메일
+          COMMITTER_NAME: GitHubActionBot # ✅ 커밋을 남기는 봇의 이름
+          COMMITTER_EMAIL: action-bot@github.com # ✅ 커밋터 이메일
           AUTHOR_NAME: sihyunjojo # ✅ 커밋 작성자 이름 (보통 자신의 GitHub 이름)
           AUTHOR_EMAIL: si4018@naver.com # ✅ 커밋 작성자 이메일 (secrets로 분리도 가능)
