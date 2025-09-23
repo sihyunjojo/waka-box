@@ -1,12 +1,13 @@
+# anmol098/waka-readme-stats 액션이 올바른 step으로 인식되도록 들여쓰기를 수정했습니다.
 name: waka readme schedule
 
 on:
   schedule:
     - cron: "30 18 * * *"  # 매일 자정(IST 기준) 실행 (한국 시간으로는 새벽 3:30)
-  workflow_dispatch:       # 수동으로도 실행 가능
+  workflow_dispatch:        # 수동으로도 실행 가능
 
 permissions:
-  contents: write          # README.md 파일을 수정하기 위한 권한 설정
+  contents: write           # README.md 파일을 수정하기 위한 권한 설정
 
 jobs:
   update-readme:
@@ -15,66 +16,63 @@ jobs:
 
     steps:
       - name: Update README
-        # run: |
-        #   git config --global user.name "github-actions[bot]"
-        #   git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-      - uses: anmol098/waka-readme-stats@master
+        # 'uses'와 'with'는 'name'과 같은 step에 포함되어야 합니다.
+        uses: anmol098/waka-readme-stats@master
         with:
           # 필수 설정: WakaTime API 키와 GitHub Personal Access Token
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-      
+        
           # 언어별 사용 시간 표시
           SHOW_LANGUAGE: true
-      
+        
           # 프로젝트별 사용 시간 표시
           SHOW_PROJECTS: true
-      
+        
           # 에디터별 사용 시간 표시
           SHOW_EDITORS: true
-      
+        
           # 운영체제별 사용 시간 표시
           SHOW_OS: true
-      
+        
           # 시간대 표시 (Asia/Seoul)
           SHOW_TIMEZONE: true
-      
+        
           # 총 누적 코드 시간 표시
           SHOW_TOTAL_CODE_TIME: false
-      
+        
           # GitHub 프로필 조회 수 표시
           SHOW_PROFILE_VIEWS: false
-      
+        
           # GitHub 저장소 수, 커밋 수 등 요약 정보 표시
           SHOW_SHORT_INFO: false
-      
+        
           # ❌ 아래 항목들은 전부 숨김 처리
-      
+        
           # 시간대별 커밋 숨김
           SHOW_COMMIT: false
-      
+        
           # 요일별 커밋 숨김
           SHOW_DAYS_OF_WEEK: false
-      
+        
           # LOC 그래프 숨김
           SHOW_LOC_CHART: false
-      
+        
           # 언어별 저장소 비율 숨김
           SHOW_LANGUAGE_PER_REPO: false
-      
+        
           # 마지막 업데이트 시간 표시
           SHOW_UPDATED_DATE: true
-      
+        
           # 업데이트 시간 형식 (예: 30/04/2025 09:42:47)
-#          UPDATED_DATE_FORMAT: "%Y년 %m월 %d일"
           UPDATED_DATE_FORMAT: "%Y년 %m월 %d일 %H시 %M분 %S초"
 
-      
+        
           # README 안 삽입할 위치 설정
           SECTION_NAME: waka
-      
+        
           # 그래프 모양 스타일 (1: 기본)
           SYMBOL_VERSION: 1
-      
+        
           # 자동 커밋 메시지
           COMMIT_MESSAGE: "docs: waka-readme 그래프 새로운 메트릭으로 업데이트"
