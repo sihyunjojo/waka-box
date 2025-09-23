@@ -14,11 +14,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Set bot user info globally
+      - name: Update README
         # run: |
         #   git config --global user.name "github-actions[bot]"
         #   git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        
       - uses: anmol098/waka-readme-stats@master
         with:
           # 필수 설정: WakaTime API 키와 GitHub Personal Access Token
