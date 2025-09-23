@@ -27,7 +27,7 @@ jobs:
           SHOW_LANGUAGE: true
         
           # 프로젝트별 사용 시간 표시
-          SHOW_PROJECTS: true
+          SHOW_PROJECTS: false
         
           # 에디터별 사용 시간 표시
           SHOW_EDITORS: true
