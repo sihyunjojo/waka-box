@@ -42,12 +42,10 @@ jobs:
           SHOW_TOTAL_CODE_TIME: false
         
           # GitHub 프로필 조회 수 표시
-          SHOW_PROFILE_VIEWS: false
+          SHOW_PROFILE_VIEWS: true
         
           # GitHub 저장소 수, 커밋 수 등 요약 정보 표시
           SHOW_SHORT_INFO: false
-        
-          # ❌ 아래 항목들은 전부 숨김 처리
         
           # 시간대별 커밋 숨김
           SHOW_COMMIT: false
