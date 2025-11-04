@@ -23,7 +23,7 @@ jobs:
           SECTION_NAME: wakasimple # ✅ README.md 안 삽입될 섹션 이름. START/END 주석과 반드시 일치해야 함
           BLOCKS: ░▒▓█ # ✅ 그래프 스타일 (예: █, ░▒▓█, ->, ⣀⣄⣤⣦⣶⣷⣿ 등 다양한 ASCII 형태 가능)
           CODE_LANG: java # ✅ 코드 블록 언어 지정 (GitHub Markdown 문법 강조용, markdown, java, rust, `txt`, `python`, `json` 등 가능)
-          TIME_RANGE: last_60_days # ✅ 통계 기간: 최근 1년간 (기타 옵션: `last_7_days`, `last_30_days`, `last_6_months`, `all_time`)
+          TIME_RANGE: all_time # ✅ 통계 기간: 최근 1년간 (기타 옵션: `last_7_days`, `last_30_days`, `last_6_months`, `all_time`)
           LANG_COUNT: 3 # ✅ 표시할 언어의 최대 개수
           SHOW_TIME: true # ✅ 각 언어별로 소요된 시간 표시 여부
           SHOW_TOTAL: true # ✅ 총 코딩 시간 표시 여부
